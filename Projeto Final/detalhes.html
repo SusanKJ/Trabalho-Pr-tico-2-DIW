@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Detalhes do produto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-RZLPcKjJgN9XaQccBsBPB5HcQ8yp5wKjCgDZgx+ULYzL8qJSwo9m/hKpnoyU82oG" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/580c7fccf0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="containerCards">
+
+            <!--  Meus itens estão aqui via js -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+<script>
+
+
+    function buscaProdutos(url) {
+        const urlParams = new URL(window.location.href);
+        const paramsUrl = new URLSearchParams(urlParams.search);
+        const id = paramsUrl.get('id');
+        fetch(url+id)
+            .then(res => res.json())
+            .then(produtos => {
+
+                if (produtos.products) {
+                    produtos = produtos.products;
+                } else {
+                    produtos = [produtos];
+                }
+                
+                let cartoes = ``;
+
+                for (let index = 0; index < produtos.length; index++) {
+
+                    cartoes = `<div class="detalhesContainer-fluid">
+                                <div class="row">
+                                <div id="card cardProduto" class="col-md-6 col-sm-1">
+                                    <img src="${produtos[index].image}" class="card-img-top" alt="">                                    
+                                </div>
+                                <div id="descricaoP" class="col-md-6 col-sm-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${produtos[index].title}</h5>
+                                        <p class="card-text">${produtos[index].articleType}</p>
+                                        <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                                        <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                                        <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                                        <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                                        <img class="imgEstrela" src="imagens/estrelacinza.png" width="40px" class="card-body-star" alt="star">
+                                        <p class="card-text">R$ ${produtos[index].price}</p>
+                                        <p class="card-text">Descrição:</p>
+                                        <p class="card-text">${produtos[index].description}</p>
+                                        <div class="btback">
+                                            <a href="index.html"><button class="botao_voltar">Voltar</button></a>
+                                        </div>                                                                 
+                                    </div>                                     
+                                </div>
+                                </div>
+                             </div>`;
+                }
+                const containerCards = document.getElementById('containerCards');
+                containerCards.innerHTML = cartoes;
+            });
+    }
+
+    buscaProdutos('https://diwserver.vps.webdock.cloud/products/');
+
+</script>

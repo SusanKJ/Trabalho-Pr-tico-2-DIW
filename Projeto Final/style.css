@@ -1,0 +1,266 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto_pesquisa {
+    width: 80%;
+}
+
+.headerInicial{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: orange;
+    height: 60px;
+}
+
+.bem-vindo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+    padding-top: 20px;    
+}
+
+.servico-cliente{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 10px;
+}
+
+.carrinho{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 10px;
+}
+
+.endereco{    
+    display: flex;
+    justify-content:flex-start;
+    padding-right: 10px;
+    color: aliceblue;    
+}
+
+h3 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    padding: 20px;   
+    display: flex;
+    justify-content:center;
+    background-color: orange;     
+}
+
+.busca-rapida{
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+    background-color: rgba(245, 223, 205, 0.76);
+    font-size:large;
+    
+}
+
+.bpreco{
+    background-color: rgba(245, 223, 205, 0.76);
+    margin-top: 10px;
+    padding: 20px;
+}
+
+label{
+    margin: 5px;
+    padding: 10px;
+    background-color: rgba(243, 208, 180, 0.945);
+    
+}
+
+label.assineAgora{
+    background-color: white;
+}
+
+#busca-preco1{
+    width: 70%;
+    margin: 5px;
+    padding: 10px;
+      
+}
+
+#busca-preco2{
+    width: 70%;
+    margin: 5px;
+    padding: 10px;
+}
+
+#busca-preco3{
+    width: 70%;
+    margin: 5px;
+    padding: 10px;
+}
+
+#deRS{
+    width: 60%;
+    margin: 5px;
+    padding: 5px;
+}
+
+#aRS{
+    width: 60%;
+    margin: 5px;
+    padding: 5px;
+}
+
+.carousel-inner{
+    padding-left: 5%;
+    margin-bottom: 10px;
+}
+
+#enviado{
+    margin: 5px;
+    padding-left: 7%;
+    margin-top: 10px;    
+}
+
+.navbarHeader{
+    display: flex;
+}
+
+#containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imgEstrela{
+    width: 40px !important;
+}
+
+.navbarHeader > a {
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.card a img {
+    width: 80% !important;
+    height: 400px !important;
+}
+
+.card{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+}
+
+.cardProduto img{
+    width: 100%;
+    max-width: 400px;
+    max-height: 600px;
+}
+
+#formGroupInput{
+    margin-bottom: 10px;
+    padding-bottom: 10px;    
+}
+
+.institucional{
+    color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pagamentos{
+    color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.contato{
+    color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.redes{
+    color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.fa-square-facebook{
+    margin: 5px;
+}
+
+.fa-instagram{
+    margin: 5px;
+}
+
+.fa-twitter{
+    margin: 5px;
+}
+
+.fa-twitch{
+    margin: 5px;
+}
+
+.fa-tiktok{
+    margin: 5px;
+}
+
+.rodape{
+    background-color: orange;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20x;  
+}
+
+#copyright{
+    background-color: rgba(250, 187, 69, 0.788);
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding: 15x;
+    color: aliceblue;
+    text-align: center;  
+}
+
+.botao_voltar {
+    display: flex;    
+    justify-content: flex-end;
+    color: aliceblue;
+    align-items:center;
+    background-color: orange;
+    border-color: orange;
+    height: 60px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.card-body{
+    margin-top: 70px;
+    align-content: center;    
+}
+
+@media (max-width: 800px) {
+    .headerInicial{
+        justify-content: center;
+    }
+
+    .navbarHeader > a{
+        font-size: 16px;
+    }
+
+    .carousel-inner{
+        padding-left: 0;       
+    }
+   
+}
+  
+@media (max-width: 1102px) {
+    .card-body-star{
+        width: 30px;
+    }
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>2° Projeo e-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-RZLPcKjJgN9XaQccBsBPB5HcQ8yp5wKjCgDZgx+ULYzL8qJSwo9m/hKpnoyU82oG" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/580c7fccf0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+   <header>
+        <div class="container-fluid">
+            <div class="row">
+              <h6 class="aluna">Desenvolvido por: Susan Karen Jaime Huaman - Curso: ADS - Matrícula: 806663</h6>
+                <div class="headerInicial">
+                  
+                    <div class="navbarHeader">
+                        <a class="nav-link active" aria-current="page" href="#">Entrar</a>
+                        <a class="nav-link" href="#">Registre-se</a>
+                        <a class="nav-link" href="#">Minha Conta</a>
+                        <a class="nav-link"  href="#">Pedidos</a>
+                      </div>
+                </div>
+                <div id="logoContainer" class="col-md-3 col-sm-4">
+                    <img src="imagens/LogoTeA.png" width="200px" alt="logo">
+                </div>
+                <div class="col-md-4 col-sm-5">
+                    <p class="bem-vindo"> Seja bem-vindo Aventureiro!</p>
+                    <form class="caixa-pesquisa">
+                        <input type="text" class="texto_pesquisa" id="searchValue">
+                        <a href="pesquisa.html"><button class="botao_pesquisar" id="btsearch">Pesquisar</button></a>
+                    </form>
+                </div>
+                <div class="col-md-5 col-sm-3">  
+                      <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid ">                          
+                          <div style="display: flex; justify-content: flex-end; width: 100%;">
+                            <div class="navbar-nav">
+                              <a class="nav-link active" aria-current="page" href="#">Pagamento na entrega</a>
+                              <a class="nav-link" href="#">Devolução em 30 dias</a>                              
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+                    <p class="servico-cliente">24/7 Serviço ao cliente: 0800 00 12 24</p>
+                    <a class="carrinho" href="#"><i class="fa-solid fa-cart-shopping fa-2x" style="color: #f9ad43;"></i></a>
+                </div>
+            </div>
+        </div>
+   </header> 
+   <!-- Conteúdo -->
+   <main>
+    <!--Pesquisa rápida -->
+        <div id="pesq-preco" class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <h3 style="color: white;">Busca Rápida - Escolher produto</h3>
+                        <p class="busca-rapida">Encontre o produto adequado ao melhor preço.</p>
+                        <form class="bpreco" action="/action_page.php">
+                            <label for="genero">Gênero:</label>
+                            <select name="busca-preco1" id="busca-preco1">
+                                <option value="Women">Feminino</option>
+                                <option value="Men">Masculino</option>
+                                <option value="Unisex">Unisex</option>
+                            </select><br>
+
+                            <label for="marca">Marca:</label>
+                            <select name="busca-preco2" id="busca-preco2">
+                                <option value="Woodland">Woodland</option>
+                                <option value="Wildcraft">Wildcraft</option>                                
+                            </select><br>
+
+                            <label for="categoria">Categoria:</label>
+                            <select name="busca-preco3" id="busca-preco3">                                
+                                <option value="Accessories - Bags">Mochilas</option>
+                                <option value="Footwear - Shoes">Botas</option>
+                                <option value="Footwear - Sandal">Sandalia</option>
+                            </select><br>                            
+                            
+                            <input id="enviado" type="submit" value="Buscar">
+                            <input id="limpaFiltro" type="submit" value="Limpar Filtros">
+                        </form>
+                </div>
+                    <!--imagem - antigo carousel -->
+                <div class="col-md-8 col-sm-6">                                    
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="imagens/estrada-trilheiros1.jpg" class="d-block w-55" alt="trilheiros na estrada">
+                            </div>                            
+                        </div>
+                </div>            
+            </div>
+        </div>
+    <!--Cards de produtos-->
+    <div class="container-fluid">
+        <div class="row">
+            <div id="containerCards">
+                
+                   <!--Meus itens estão aqui via js-->
+                                 
+            </div>
+
+            </div>              
+            </div>
+        </div>
+    </div>
+   </main>
+   <!-- Pé de página -->
+   <footer class="rodape">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="institucional">
+                        <h6>Institucional</h6>
+                        <a href="#" class="sobre">Sobre nós</a><br>
+                        <a href="#" class="faq">Perguntas frequentes</a><br>
+                        <a href="#" class="privacidade">Política de privacidade</a><br>
+                        <a href="#" class="devolucoes">Cancelamento e devoluções</a><br>
+                        <a href="#" class="ouvidoria">Ouvidoria</a><br>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="pagamentos">
+                        <section class="pay-options content-limits l-1200 clearfix">
+                            <h6>Formas de Pagamento</h6>
+                            <i class="fa fa-cc-visa fa-2x" aria-hidden="true" style="color: #fff;"></i>
+                            <i class="fab fa-cc-mastercard fa-2x" style="color: #fff;"></i>
+                            <i class="fab fa-cc-amex fa-2x" style="color: #fff;"></i>
+                            <i class="fa-brands fa-cc-paypal fa-2x" style="color: #fff;"></i><br>
+                            <i class="fa-brands fa-google-pay fa-2x" style="color: #fff;"></i>
+                            <i class="fa-brands fa-apple-pay fa-2x" style="color: #fff;"></i>                           
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="redes">
+                        <h6>Siga nossas redes socias</h6>
+                        <a href="#"><i class="fa-brands fa-square-facebook fa-2x" style="color: #fff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram fa-2x" style="color: #fff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fa-2x" style="color: #fff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitch fa-2x" style="color: #fff;"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok fa-2x" style="color: #fff;"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="contato">
+                        <h6>Fale Conosco</h6>                        
+                        <a href="#" class="email">info@trekkingtea.com</a><br>
+                        <p>(31) 9456-4563</p>
+                        <p class="endereco">Av. Carandai 1120, Funcionários. <br> Belo Horizonte - Minas Gerais<br>CEP 31354-266</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="copyright">
+            <div class="row">
+                <div class="col-md12 col-sm12">
+                    <div class="copyright">
+                        <p class="copyright">© 2020-2023 Trilhas & Aventuras CNPJ 12.345.678/0009-10</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>   
+</body>
+</html>
+
+<script>
+
+    function filtroTituloParecido(array, key, value) {
+            return array.filter(item => {
+                const itemValue = item[key];
+                if (typeof itemValue === 'string') {
+                    return itemValue.toLowerCase().includes(value.toLowerCase());
+                }
+                return false;
+            });
+        }
+
+  function buscaProdutos(url,params) {
+      fetch(url)
+        .then(res => res.json())
+        .then(produtos => {
+
+          if(produtos.products){
+            produtos = produtos.products;
+          }else{
+            produtos = [produtos];
+          }
+
+          if(!params?.gender && !params?.brandName && !params?.category){
+            produtos = produtos.splice(2);
+          }
+
+          if(params?.gender && produtos.length){
+            produtos = produtos.filter(({gender}) => gender === params.gender);
+          }
+
+          if(params?.brandName && produtos.length){
+            produtos = produtos.filter(({ brandName }) => brandName === params.brandName);
+          }
+
+          if (params?.category && produtos.length) {
+            produtos = produtos.filter(({ category }) => category === params.category);
+          }
+
+          if(params?.searchValue && produtos.length){
+            produtos = filtroTituloParecido(produtos,'title', params.searchValue);
+          }
+
+          let cartoes = ``;
+
+          if(produtos.length){
+            for (let index = 0; index < produtos.length; index++) {
+                  cartoes += `<div class="card cardProduto">
+                        <a href="detalhes.html?id=${produtos[index].id}"><img src="${produtos[index].image}" class="card-img-top" alt=""></a>
+                        <div class="card-body">
+                          <h5 class="card-title">${produtos[index].title}</h5>
+                          <p class="card-text">${produtos[index].articleType}</p>
+                          <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                          <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                          <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                          <img class="imgEstrela" src="imagens/estrelaazul.png" width="40px" class="card-body-star" alt="star">
+                          <img class="imgEstrela" src="imagens/estrelacinza.png" width="40px" class="card-body-star" alt="star">
+                          <p class="card-text">R$ ${produtos[index].price}</p>                         
+                        </div>
+                        </div>`;
+
+              }
+          }else{
+            cartoes = `<h1>Nenhum produto encontrado<h1/>`;
+          }
+          const containerCards = document.getElementById('containerCards');
+          containerCards.innerHTML = cartoes;
+        });
+  }
+
+  buscaProdutos('https://diwserver.vps.webdock.cloud/products?page=619');
+
+  const enviado = document.getElementById('enviado');
+  const limpaFiltro = document.getElementById('limpaFiltro');
+  const btsearch = document.getElementById('btsearch');
+  
+
+  enviado.addEventListener('click',(event) => {
+    event.preventDefault();
+    const gender = document.getElementById('busca-preco1').value;
+    const brandName = document.getElementById('busca-preco2').value;
+    const category = document.getElementById('busca-preco3').value;
+    let params = {
+        gender,
+        brandName,
+        category
+    };
+    buscaProdutos('https://diwserver.vps.webdock.cloud/products?page=619',params);
+  })
+  
+  limpaFiltro.addEventListener('click', (event) => {
+        event.preventDefault();
+        buscaProdutos('https://diwserver.vps.webdock.cloud/products?page=619');
+  })
+
+  btsearch.addEventListener('click',(event) => {
+    event.preventDefault();
+    const searchValue = document.getElementById('searchValue').value;
+    params = {
+        searchValue
+    }
+    buscaProdutos('https://diwserver.vps.webdock.cloud/products?page=619', params);
+  })
+
+   
+
+</script>
